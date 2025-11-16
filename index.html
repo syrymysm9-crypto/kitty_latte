@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kitty Latte — مقهى افتراضي</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <!-- Inline SVG logo -->
+        <svg width="48" height="48" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="g" x1="0" x2="1">
+              <stop offset="0" stop-color="#ffd6e8"/>
+              <stop offset="1" stop-color="#ffb3d1"/>
+            </linearGradient>
+          </defs>
+          <rect rx="10" width="64" height="64" fill="url(#g)"/>
+          <g transform="translate(10,12)" fill="#fff">
+            <path d="M20 0c-6 0-11 4.5-11 10 0 1 0 1.5.3 2.3C7 12.7 4 15.7 4 20c0 5.5 4.5 10 10 10h12c5.5 0 10-4.5 10-10 0-4.3-3-7.3-5.3-7.7.3-.8.3-1.3.3-2.3C40 4.5 35 0 29 0H20z"/>
+          </g>
+        </svg>
+        <span class="brand">Kitty Latte</span>
+      </div>
+      <nav class="nav">
+        <a href="#menu">قائمة</a>
+        <a href="#about">حول</a>
+        <a href="#contact">تواصل</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <h1>مرحبًا بـ <span class="accent">Kitty Latte</span></h1>
+        <p>موقع تجريبي لمشروع واجهة مقهى افتراضي — ألوان وردية، تصميم عصري وخفيف.</p>
+        <a class="btn" href="#menu">اطّلع على القائمة</a>
+      </div>
+    </section>
+
+    <section id="menu" class="container section">
+      <h2 class="section-title">قائمة المشروبات</h2>
+      <div class="cards">
+        <article class="card">
+          <img src="assets/latte.svg" alt="Latte" />
+          <h3>لاتيه القطط</h3>
+          <p>لاتيه مخملي مع رشة كاكاو بشكل قطة.</p>
+          <div class="price">12 SAR</div>
+        </article>
+
+        <article class="card">
+          <img src="assets/pink_tea.svg" alt="Pink Tea" />
+          <h3>شاي وردي</h3>
+          <p>شاي زهري دافئ مع لمسة عسل.</p>
+          <div class="price">10 SAR</div>
+        </article>
+
+        <article class="card">
+          <img src="assets/cake.svg" alt="Cake" />
+          <h3>كيكة القرفة</h3>
+          <p>شريحة كيكة ناعمة تقدم مع كريمة الفانيلا.</p>
+          <div class="price">18 SAR</div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="container section about">
+      <div class="about-grid">
+        <div>
+          <h2 class="section-title">حول Kitty Latte</h2>
+          <p>هذا مشروع واجهة لاختبار التصميمات والتقنيات. يمكنك استخدام القالب كبداية لبناء مشروع أكبر أو بروتوتايب.</p>
+          <ul>
+            <li>تصميم RTL (اللغة العربية)</li>
+            <li>مقاس متجاوب للهواتف والحواسيب</li>
+            <li>ألوان وردية هادئة ومريحة</li>
+          </ul>
+        </div>
+        <div class="mockup">
+          <img src="assets/phone_mockup.svg" alt="Mockup" />
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="container section contact">
+      <h2 class="section-title">تواصل معنا</h2>
+      <form id="contactForm" class="contact-form" onsubmit="submitForm(event)">
+        <label>الاسم
+          <input type="text" name="name" placeholder="اسمك" required>
+        </label>
+        <label>البريد الإلكتروني
+          <input type="email" name="email" placeholder="example@domain.com" required>
+        </label>
+        <label>الرسالة
+          <textarea name="message" rows="4" placeholder="اكتب رسالتك..." required></textarea>
+        </label>
+        <button class="btn" type="submit">أرسل</button>
+        <p class="form-note" id="formNote" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Kitty Latte — مشروع تجريبي</p>
+      <div class="socials">
+        <a href="#" aria-label="Instagram">إنستغرام</a>
+        <a href="#" aria-label="Twitter">تويتر</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
